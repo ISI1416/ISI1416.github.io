@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Chocolates</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Agregar Leaflet.js para el mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+</head>
+<body>
+    <!-- Menú de navegación -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#login">Iniciar sesión</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Tienda de Chocolates</h1>
+    </header>
+    
+    <section id="geolocalizacion">
+        <h2>Ubicación Actual</h2>
+        <!-- Contenedor del mapa -->
+        <div id="map" style="height: 300px;"></div>
+        <p id="location">Cargando ubicación...</p>
+    </section>
+
+    <section id="productos">
+        <h2>Calcula tu Pedido</h2>
+        <label for="cantidad">Cantidad (en gramos): </label>
+        <input type="number" id="cantidad" value="100" min="0">
+        <button onclick="calcularPrecio()">Calcular Precio</button>
+        <p id="resultado">Precio: -</p>
+    </section>
+
+    <section id="galeria">
+        <h2>Galería de Chocolates</h2>
+        <!-- Las imágenes ahora están en el mismo nivel que el archivo index.html -->
+        <img src="chocolate1.jpg" alt="Chocolate 1">
+        <img src="chocolate2.jpg" alt="Chocolate 2">
+    </section>
+
+    <section id="video">
+        <h2>Conoce más sobre nuestros chocolates</h2>
+        <!-- El video ahora está en el mismo nivel que el archivo index.html -->
+        <video width="400" controls>
+            <source src="chocolates.mp4" type="video/mp4">
+            Tu navegador no soporta el video.
+        </video>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
